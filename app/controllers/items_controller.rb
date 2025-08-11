@@ -6,11 +6,11 @@ class ItemsController < ApplicationController
   end
 
   def new_item_form
-    render({ :template =>"item_templates/new_item_form" })
+    render({ :template => "item_templates/new_item_form" })
   end
 
   def create_new_item
-new_item = Item.new
+    new_item = Item.new
 
     new_item.link_url = params.fetch("query_link_url")
     new_item.link_description = params.fetch("query_link_description")
