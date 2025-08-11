@@ -4,4 +4,12 @@ class ItemsController < ApplicationController
 
     render({ :template => "item_templates/list" })
   end
+
+  def insert_item
+    render({ :template =>"item_templates/backdoor" })
+  end
+
+  def backdoor_enter
+    redirect_to("/")
+  end
 end
